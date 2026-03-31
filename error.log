@@ -1,0 +1,56 @@
+EasyBus server running on http://localhost:5000
+/mnt/c/Users/Adam Elmadani/Desktop/EasyBus/node_modules/mongodb/lib/connection_string.js:273
+        throw new error_1.MongoParseError(`${optionWord} ${Array.from(unsupportedOptions).join(', ')} ${isOrAre} not supported`);
+              ^
+
+MongoParseError: option useunifiedtopology is not supported
+    at parseOptions (/mnt/c/Users/Adam Elmadani/Desktop/EasyBus/node_modules/mongodb/src/connection_string.ts:364:11)
+    at new MongoClient (/mnt/c/Users/Adam Elmadani/Desktop/EasyBus/node_modules/mongodb/src/mongo_client.ts:421:32)
+    at Function.connect (/mnt/c/Users/Adam Elmadani/Desktop/EasyBus/node_modules/mongodb/src/mongo_client.ts:864:20)
+    at new DBClient (/mnt/c/Users/Adam Elmadani/Desktop/EasyBus/utils/db.js:11:17)
+    at Object.<anonymous> (/mnt/c/Users/Adam Elmadani/Desktop/EasyBus/utils/db.js:40:18)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._compile (/mnt/c/Users/Adam Elmadani/Desktop/EasyBus/node_modules/pirates/lib/index.js:117:24)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Object.newLoader [as .js] (/mnt/c/Users/Adam Elmadani/Desktop/EasyBus/node_modules/pirates/lib/index.js:121:7)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/mnt/c/Users/Adam Elmadani/Desktop/EasyBus/controllers/AppController.js:2:1)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._compile (/mnt/c/Users/Adam Elmadani/Desktop/EasyBus/node_modules/pirates/lib/index.js:117:24)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Object.newLoader [as .js] (/mnt/c/Users/Adam Elmadani/Desktop/EasyBus/node_modules/pirates/lib/index.js:121:7)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/mnt/c/Users/Adam Elmadani/Desktop/EasyBus/routes/index.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._compile (/mnt/c/Users/Adam Elmadani/Desktop/EasyBus/node_modules/pirates/lib/index.js:117:24)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Object.newLoader [as .js] (/mnt/c/Users/Adam Elmadani/Desktop/EasyBus/node_modules/pirates/lib/index.js:121:7)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Module.require (node:internal/modules/cjs/loader:1233:19)
+    at require (node:internal/modules/helpers:179:18)
+    at Object.<anonymous> (/mnt/c/Users/Adam Elmadani/Desktop/EasyBus/server.js:3:1)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._compile (/mnt/c/Users/Adam Elmadani/Desktop/EasyBus/node_modules/pirates/lib/index.js:117:24)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Object.newLoader [as .js] (/mnt/c/Users/Adam Elmadani/Desktop/EasyBus/node_modules/pirates/lib/index.js:121:7)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Function.runMain (node:internal/modules/run_main:174:12)
+    at Object.<anonymous> (/mnt/c/Users/Adam Elmadani/Desktop/EasyBus/node_modules/@babel/node/src/_babel-node.ts:222:12)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:1024:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+    at node:internal/main/run_main_module:28:49 {
+  errorLabelSet: Set(0) {}
+}
+
+Node.js v20.15.0

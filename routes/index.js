@@ -1,7 +1,7 @@
-import AppController from '../controllers/AppController';
-import AuthController from '../controllers/AuthController';
-import UsersController from '../controllers/UsersController';
-import BusesController from '../controllers/BusesController';
+const AppController = require('../controllers/AppController');
+const AuthController = require('../controllers/AuthController');
+const UsersController = require('../controllers/UsersController');
+const BusesController = require('../controllers/BusesController');
 
 const express = require('express');
 

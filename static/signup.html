@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create your EasyBus account to start tracking buses, planning routes, and more.">
+  <title>Sign Up - EasyBus</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="navbar__inner">
+        <a href="./index.html" class="navbar__brand">
+          <div class="navbar__logo">EB</div>
+          EasyBus
+        </a>
+        <button class="navbar__toggle" id="navToggle" aria-label="Toggle menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+        <div class="navbar__links" id="navLinks">
+          <a href="./index.html" class="navbar__link">Home</a>
+          <a href="./about.html" class="navbar__link">About</a>
+          <a href="./login.html" class="navbar__link">Log In</a>
+          <a href="./signup.html" class="navbar__link navbar__link--cta navbar__link--active">Sign Up</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content section">
+      <div class="container">
+        <div class="card form-card card--no-hover animate-in">
+          <h1 class="form-card__title">Create your account</h1>
+          <p class="form-card__subtitle">Start tracking buses in seconds</p>
+
+          <form id="signupForm" novalidate>
+            <div class="form-group">
+              <label for="signupUsername">Username</label>
+              <input
+                type="text"
+                id="signupUsername"
+                class="form-input"
+                placeholder="Choose a username"
+                required
+              >
+              <p class="form-error" id="signupUsernameError">Username is required.</p>
+            </div>
+
+            <div class="form-group">
+              <label for="signupEmail">Email address</label>
+              <input
+                type="email"
+                id="signupEmail"
+                class="form-input"
+                placeholder="you@example.com"
+                required
+              >
+              <p class="form-error" id="signupEmailError">Please enter a valid email address.</p>
+            </div>
+
+            <div class="form-group">
+              <label for="signupPassword">Password</label>
+              <input
+                type="password"
+                id="signupPassword"
+                class="form-input"
+                placeholder="Create a password"
+                required
+                minlength="6"
+              >
+              <p class="form-error" id="signupPasswordError">Password must be at least 6 characters.</p>
+            </div>
+
+            <div class="form-group">
+              <label for="signupConfirmPassword">Confirm password</label>
+              <input
+                type="password"
+                id="signupConfirmPassword"
+                class="form-input"
+                placeholder="Confirm your password"
+                required
+              >
+              <p class="form-error" id="signupConfirmPasswordError">Passwords do not match.</p>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--block mt-16">Create Account</button>
+          </form>
+
+          <p class="form-footer">
+            Already have an account? <a href="./login.html">Log in</a>
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="footer__text">&copy; 2024 EasyBus. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>
