@@ -1,45 +1,33 @@
-const { createClient } = require('redis');
-
-class RedisClient {
+// Simple In-memory Store for Tokens (Previously Redis)
+class InMemStore {
   constructor() {
-    this.client = createClient();
-    this.connected = false;
-
-    this.client.on('error', (err) => {
-      console.error('Redis client error:', err.message);
-      this.connected = false;
-    });
-
-    this.client.on('connect', () => {
-      this.connected = true;
-    });
-
-    this.client.connect().catch((err) => {
-      console.error('Redis connection failed:', err.message);
-    });
+    this.store = {};
+    console.log('Using in-memory store for session management.');
   }
 
   isAlive() {
-    return this.connected;
+    return true;
   }
 
   async get(key) {
-    if (!this.connected) return null;
-    return this.client.get(key);
+    const item = this.store[key];
+    if (!item) return null;
+    if (item.expiresAt && Date.now() > item.expiresAt) {
+      delete this.store[key];
+      return null;
+    }
+    return item.value;
   }
 
   async set(key, value, duration) {
-    if (!this.connected) return;
-    await this.client.set(key, value, {
-      EX: duration,
-    });
+    const expiresAt = duration ? Date.now() + (duration * 1000) : null;
+    this.store[key] = { value, expiresAt };
   }
 
   async del(key) {
-    if (!this.connected) return;
-    await this.client.del(key);
+    delete this.store[key];
   }
 }
 
-const redisClient = new RedisClient();
-module.exports = redisClient;
+const store = new InMemStore();
+module.exports = store;

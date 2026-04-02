@@ -3,36 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EasyBus</title>
+    <title>EasyBus - Sign Up</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header class="header">
-            <div class="eb">
-                <a href="./home.html">
-                    <h1>ƎB</h1>
-                </a>
-            </div>
-            <div class="encadr">
-                <h2>EasyBus</h2>
-            </div>
+        <div class="eb">
+            <a href="./home.html">EasyBus</a>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./login.html">Login</a></li>
+            </ul>
+        </div>
     </header>
 
-        <div class="container">
-            <form id="signup-form">
-                <input type="text" id="username" placeholder="Username" required>
-                <input type="email" id="email" placeholder="Email" required>
-                <input type="password" id="password" placeholder="Password" required>
-                <input type="password" id="confirm-password" placeholder="Confirm Password" required>
-                <button class="button">Send</button>
-            </form>
-            <p>Already have an account? <a href="./login.html">Login</a></p>
-        </div> 
+    <div class="container">
+        <h1>Create an Account</h1>
+        <form id="signup-form">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p style="text-align: center; margin-top: 1rem;">Already have an account? <a href="./login.html" style="color: var(--primary-color);">Login</a></p>
+    </div> 
          
-    <script src="../src/pages/Signup.js"></script>
+    <script src="./js/app.js"></script>
     
     <footer class="footer">
-        <p>&copy; 2024 webApp</p>
+        <p>&copy; 2024 EasyBus. All rights reserved.</p>
     </footer>
 </body>
 </html>

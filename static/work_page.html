@@ -1,45 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>EasyBus.ma</title>
-	<link rel="stylesheet" href="./css/work_style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyBus - Dashboard</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-
-    <div class="navbar">
-            <img src="./pic/Capture d’écran 2024-03-30 164118.png">
+    <header class="header">
+        <div class="eb">
+            <a href="./home.html">EasyBus</a>
+        </div>
+        <div class="navbar">
             <ul>
-                <li> <a href="./connexion.html">About</a></li>
-                <li> <a href="./profile.html">Profile</a></li>
-                <li> <a href="./home.html">Disconnect</a></li>
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="#" id="logout-btn">Logout</a></li>
             </ul>
-    </div>
-    <div class=".degrade-horizontal">
-        <div class="container2">
-            <h1>Search for Stations or Route</h1>
-            <div class="tabs">
-                <button class="tab-btn active" id="stationsTab">Stations</button>
-                <button class="tab-btn" id="targetTab">Route</button>
-            </div>
+        </div>
+    </header>
 
-            <div id="stationsForm" class="search-form">
-                <input type="text" id="stationSearch" placeholder="Enter station name...">
-                <button class="btn" onclick="searchStations()">Search</button>
-            </div>
+    <div class="container">
+        <h1>Bus Information & Routes</h1>
+        
+        <div class="tabs">
+            <div class="tab active" id="stationsTab" onclick="switchTab('stations')">Stations</div>
+            <div class="tab" id="targetTab" onclick="switchTab('target')">Routes</div>
+        </div>
 
-            <div id="targetForm" class="search-form hidden">
-                <input type="text" id="departure" placeholder="From...">
-                <input type="text" id="destination" placeholder="To...">
-                <button class="btn" onclick="searchRoute()">Search</button>
-            </div>
-
-            <div id="results">
-                <!-- Results will be displayed here -->
+        <div id="stationsForm">
+            <div class="search-form" style="display: flex; gap: 10px; margin-bottom: 2rem; max-width: 100%;">
+                <input type="text" id="stationSearch" placeholder="Enter station name (e.g. Station A)..." style="flex: 1;">
+                <button onclick="searchStations_flasename()">Search</button>
             </div>
         </div>
 
-        <script src="./js/script.js"></script>
+        <div id="targetForm" class="hidden">
+            <div class="search-form" style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 2rem; max-width: 100%;">
+                <input type="text" id="departure" placeholder="From (e.g. Station A)">
+                <input type="text" id="destination" placeholder="To (e.g. Station B)">
+                <button onclick="searchRoute()">Find Route</button>
+            </div>
+        </div>
+
+        <div id="results">
+            <!-- Results will be displayed here -->
+            <p style="text-align: center; color: var(--text-muted);">Enter a station or route to see live results.</p>
+        </div>
     </div>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/app.js"></script>
+    
+    <footer class="footer">
+        <p>&copy; 2024 EasyBus. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function switchTab(tab) {
+            const stationsTab = document.getElementById('stationsTab');
+            const targetTab = document.getElementById('targetTab');
+            const stationsForm = document.getElementById('stationsForm');
+            const targetForm = document.getElementById('targetForm');
+
+            if (tab === 'stations') {
+                stationsTab.classList.add('active');
+                targetTab.classList.remove('active');
+                stationsForm.classList.remove('hidden');
+                targetForm.classList.add('hidden');
+            } else {
+                targetTab.classList.add('active');
+                stationsTab.classList.remove('active');
+                targetForm.classList.remove('hidden');
+                stationsForm.classList.add('hidden');
+            }
+        }
+    </script>
 </body>
 </html>

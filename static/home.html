@@ -1,34 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>EasyBus.ma</title>
-	<link rel="stylesheet" href="./css/homestyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyBus - Home</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .hero {
+            text-align: center;
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #ffffff 100%);
+            border-radius: 0 0 50px 50px;
+            margin-bottom: 3rem;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+    </style>
 </head>
 <body>
-    <div class="banner">
+    <header class="header">
+        <div class="eb">
+            <a href="./home.html">EasyBus</a>
+        </div>
         <div class="navbar">
-            <img src="./pic/Capture d’écran 2024-03-30 164118.png">
             <ul>
-                <li> <a href="./home.html">Home</a></li>
-                <li> <a href="./about.html">About</a></li>
-                <li> <a href="./login.html">login</a></li>
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./login.html">Login</a></li>
             </ul>
         </div>
-        <div class="content">
+    </header>
+
+    <main>
+        <section class="hero">
             <h1>Easy to transport You</h1>
-            <p>EasyBus is a Web application designed to provide users with real-time<br>
-                information about nearby bus routes, timings, and stops.
-                    With a user-friendly interface,<br> users can 
-                        easily plan their trips, find
-                        the closest bus stops, <br>and
-                        track the arrival times of buses.</p>
-            <div>
-                <button type="button"><span></span><a href="./about.html"> WATCH MORE </a></button>
-                <button type="button"><span></span><a href="./index.html"> SIGN UP </a></button>
+            <p>EasyBus provides real-time information about nearby bus routes, timings, and stops. Plan your trips effortlessly.</p>
+            <div class="cta-buttons">
+                <a href="./work_page.html" class="button">Find Bus</a>
+                <a href="./index.html" class="button button-outline">Sign Up</a>
             </div>
-        </div>
-    </div>
+        </section>
+
+        <section class="container" style="background: none; box-shadow: none;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="card">
+                    <h3 style="text-align: left; margin-bottom: 1rem; color: var(--primary-color);">Real-time Tracking</h3>
+                    <p>Track buses in real-time and know exactly when they will arrive at your stop.</p>
+                </div>
+                <div class="card">
+                    <h3 style="text-align: left; margin-bottom: 1rem; color: var(--primary-color);">Smart Routes</h3>
+                    <p>Find the most efficient routes to your destination with our smart routing engine.</p>
+                </div>
+                <div class="card">
+                    <h3 style="text-align: left; margin-bottom: 1rem; color: var(--primary-color);">User Friendly</h3>
+                    <p>Simple and intuitive interface designed for a seamless travel experience.</p>
+                </div>
+            </div>
+        </section>
+    </main>
     
+    <footer class="footer">
+        <p>&copy; 2024 EasyBus. All rights reserved.</p>
+    </footer>
 </body>
 </html>

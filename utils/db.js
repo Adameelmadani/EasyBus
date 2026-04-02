@@ -1,70 +1,94 @@
-const { MongoClient } = require('mongodb');
+const fs = require('fs');
+const path = require('path');
 
-const DB_HOST = process.env.DB_HOST || 'localhost';
-const DB_PORT = process.env.DB_PORT || 27017;
-const DB_DATABASE = process.env.DB_DATABASE || 'easybus';
-const url = `mongodb://${DB_HOST}:${DB_PORT}`;
+const dbPath = path.resolve(__dirname, '../easybus_db.json');
 
 class DBClient {
   constructor() {
-    this.connected = false;
-    this.db = null;
+    this.data = {
+      users: [],
+      buses: []
+    };
+    this.load();
+    this.seedBuses();
+  }
 
-    this.client = new MongoClient(url);
-    this.client.connect()
-      .then(() => {
-        this.db = this.client.db(DB_DATABASE);
-        this.connected = true;
-        this.seedBuses();
-      })
-      .catch((err) => {
-        console.error('MongoDB connection error:', err.message);
-        this.connected = false;
-      });
+  load() {
+    if (fs.existsSync(dbPath)) {
+      try {
+        const content = fs.readFileSync(dbPath, 'utf8');
+        this.data = JSON.parse(content);
+      } catch (e) {
+        console.error('Error loading DB:', e);
+      }
+    }
+  }
+
+  save() {
+    try {
+      fs.writeFileSync(dbPath, JSON.stringify(this.data, null, 2));
+    } catch (e) {
+      console.error('Error saving DB:', e);
+    }
   }
 
   isAlive() {
-    return this.connected;
+    return true;
   }
 
   async nbUsers() {
-    if (!this.connected) return 0;
-    return this.db.collection('users').countDocuments();
+    return this.data.users.length;
   }
 
   async nbBuses() {
-    if (!this.connected) return 0;
-    return this.db.collection('buses').countDocuments();
+    return this.data.buses.length;
   }
 
   async getUser(query) {
-    if (!this.connected) return null;
-    return this.db.collection('users').findOne(query);
+    return this.data.users.find(user => {
+      return Object.keys(query).every(key => {
+        const val = query[key];
+        return String(user[key]) === String(val);
+      });
+    }) || null;
   }
 
   async setUser(userData) {
-    if (!this.connected) return null;
-    const result = await this.db.collection('users').insertOne(userData);
-    return result.insertedId;
+    const newUser = {
+      _id: Date.now().toString(),
+      ...userData
+    };
+    this.data.users.push(newUser);
+    this.save();
+    return newUser._id;
   }
 
   get users() {
-    if (!this.connected) return { findOne: async () => null };
-    return this.db.collection('users');
+    return {
+      findOne: async (query) => this.getUser(query),
+      insertOne: async (doc) => {
+        const id = await this.setUser(doc);
+        return { insertedId: id };
+      }
+    };
   }
 
   get buses() {
-    if (!this.connected) return { find: () => ({ toArray: async () => [] }), findOne: async () => null };
-    return this.db.collection('buses');
+    return {
+      find: () => ({
+        toArray: async () => this.data.buses
+      }),
+      findOne: async (query) => {
+        return this.data.buses.find(bus => bus.busId === query.busId) || null;
+      }
+    };
   }
 
   async seedBuses() {
-    if (!this.connected) return;
-    const count = await this.nbBuses();
-    if (count > 0) return;
+    if (this.data.buses.length > 0) return;
 
-    console.log('Seeding initial buses data...');
-    const busesData = [
+    console.log('Seeding initial buses data (JSON DB)...');
+    this.data.buses = [
       {
         busId: 'BUS001',
         departureTimes: ['08:00', '08:10', '08:15', '08:20'],
@@ -83,9 +107,18 @@ class DBClient {
           { name: 'Station Z', timeRemaining: ['00:20:00', '00:30:00', '00:35:00', '00:40:00'] },
         ],
       },
+      {
+        busId: 'BUS003',
+        departureTimes: ['09:00', '09:10', '09:15', '09:20'],
+        stations: [
+          { name: 'Station X', timeRemaining: ['00:00:00', '00:10:00', '00:15:00', '00:20:00'] },
+          { name: 'Station Q', timeRemaining: ['00:10:00', '00:20:00', '00:25:00', '00:30:00'] },
+          { name: 'Station R', timeRemaining: ['00:20:00', '00:30:00', '00:35:00', '00:40:00'] },
+        ],
+      },
     ];
-    await this.db.collection('buses').insertMany(busesData);
-    console.log('Seeded initial buses data successfully.');
+    this.save();
+    console.log('Seeded initial buses data (JSON DB) successfully.');
   }
 }
 
