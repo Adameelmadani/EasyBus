@@ -1,80 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EasyBus - Home</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <style>
-        .hero {
-            text-align: center;
-            padding: 5rem 2rem;
-            background: linear-gradient(135deg, var(--secondary-color) 0%, #ffffff 100%);
-            border-radius: 0 0 50px 50px;
-            margin-bottom: 3rem;
-        }
-        .hero h1 {
-            font-size: 3.5rem;
-            color: var(--text-color);
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto 2rem;
-        }
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EasyBus - Real-time bus tracking, smart routes, and effortless trip planning.">
+  <title>EasyBus - Smart Bus Transport</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="eb">
-            <a href="./home.html">EasyBus</a>
-        </div>
-        <div class="navbar">
-            <ul>
-                <li><a href="./home.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./login.html">Login</a></li>
-            </ul>
-        </div>
-    </header>
 
-    <main>
-        <section class="hero">
-            <h1>Easy to transport You</h1>
-            <p>EasyBus provides real-time information about nearby bus routes, timings, and stops. Plan your trips effortlessly.</p>
-            <div class="cta-buttons">
-                <a href="./work_page.html" class="button">Find Bus</a>
-                <a href="./index.html" class="button button-outline">Sign Up</a>
-            </div>
-        </section>
+  <!-- Header -->
+  <header class="header">
+    <div class="eb"><a href="./home.html">EasyBus</a></div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./login.html">Log In</a></li>
+        <li><a href="./index.html" class="nav-cta">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <section class="container" style="background: none; box-shadow: none;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                <div class="card">
-                    <h3 style="text-align: left; margin-bottom: 1rem; color: var(--primary-color);">Real-time Tracking</h3>
-                    <p>Track buses in real-time and know exactly when they will arrive at your stop.</p>
-                </div>
-                <div class="card">
-                    <h3 style="text-align: left; margin-bottom: 1rem; color: var(--primary-color);">Smart Routes</h3>
-                    <p>Find the most efficient routes to your destination with our smart routing engine.</p>
-                </div>
-                <div class="card">
-                    <h3 style="text-align: left; margin-bottom: 1rem; color: var(--primary-color);">User Friendly</h3>
-                    <p>Simple and intuitive interface designed for a seamless travel experience.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <footer class="footer">
-        <p>&copy; 2024 EasyBus. All rights reserved.</p>
-    </footer>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-badge">Live Tracking Available</div>
+    <h1>Your Ride,<br><span>Made Easy</span></h1>
+    <p>Real-time bus information, smart route planning, and live arrival times — all in one place. Travel smarter, not harder.</p>
+    <div class="hero-buttons">
+      <a href="./work_page.html" class="btn btn-primary btn-lg">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        Find a Bus
+      </a>
+      <a href="./index.html" class="btn btn-outline btn-lg">Create Account</a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>Real-time Tracking</h3>
+        <p>Track buses live and know exactly when they arrive at your stop. No more guessing.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>Smart Routes</h3>
+        <p>Find the fastest route to your destination with our intelligent routing engine.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>User Friendly</h3>
+        <p>Clean and intuitive interface designed for a seamless, effortless travel experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats" id="stats-section">
+    <div class="stat-card">
+      <div class="stat-number" id="stat-buses">—</div>
+      <div class="stat-label">Active Bus Routes</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number" id="stat-users">—</div>
+      <div class="stat-label">Registered Users</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">24/7</div>
+      <div class="stat-label">Availability</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 EasyBus. All rights reserved.</p>
+  </footer>
+
+  <script src="./js/app.js"></script>
+  <script>
+    // Fetch live stats
+    fetch('/api/stats')
+      .then(r => r.json())
+      .then(data => {
+        document.getElementById('stat-buses').textContent = data.buses || 0;
+        document.getElementById('stat-users').textContent = data.users || 0;
+      })
+      .catch(() => {});
+  </script>
 </body>
 </html>

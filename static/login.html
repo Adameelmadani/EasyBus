@@ -1,45 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EasyBus - Login</title>
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Log in to your EasyBus account to access bus tracking and route planning.">
+  <title>EasyBus - Log In</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="eb">
-            <a href="./home.html">EasyBus</a>
-        </div>
-        <div class="navbar">
-            <ul>
-                <li><a href="./home.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./index.html">Sign Up</a></li>
-            </ul>
-        </div>
-    </header>
 
-    <div class="container">
-        <h1>Welcome Back</h1>
-        <form id="login-form">
-            <input type="email" id="email" placeholder="Email" required>
-            <input type="password" id="password" placeholder="Password" required>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem; font-size: 0.9rem;">
-                <label style="display: flex; align-items: center; gap: 5px;">
-                    <input type="checkbox" style="width: auto;"> Remember me
-                </label>
-                <a href="#" style="color: var(--primary-color);">Forgot Password?</a>
-            </div>
-            <button type="submit" style="margin-top: 1.5rem;">Login</button>
-        </form>
-        <p style="text-align: center; margin-top: 1.5rem;">Don't have an account? <a href="./index.html" style="color: var(--primary-color); font-weight: 600;">Sign Up</a></p>
+  <!-- Header -->
+  <header class="header">
+    <div class="eb"><a href="./home.html">EasyBus</a></div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./login.html">Log In</a></li>
+        <li><a href="./index.html" class="nav-cta">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Login Form -->
+  <div class="auth-wrapper">
+    <div class="auth-card">
+      <h1>Welcome Back</h1>
+      <p class="subtitle">Log in to continue your journey</p>
+
+      <form id="login-form">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" class="form-input" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" class="form-input" placeholder="Enter your password" required>
+        </div>
+        <div class="form-row">
+          <label><input type="checkbox"> Remember me</label>
+          <a href="#">Forgot Password?</a>
+        </div>
+        <button type="submit" class="btn-block" style="margin-top: 1rem;">Log In</button>
+      </form>
+
+      <p class="auth-footer">Don't have an account? <a href="./index.html">Sign Up</a></p>
     </div>
+  </div>
 
-    <script src="./js/app.js"></script>
-    
-    <footer class="footer">
-        <p>&copy; 2024 EasyBus. All rights reserved.</p>
-    </footer>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 EasyBus. All rights reserved.</p>
+  </footer>
+
+  <script src="./js/app.js"></script>
 </body>
 </html>
