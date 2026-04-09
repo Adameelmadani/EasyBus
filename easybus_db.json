@@ -331,21 +331,5 @@
       ]
     }
   ],
-  "favorites": [],
-  "feedback": [
-    {
-      "_id": "1775745668394",
-      "rating": 5,
-      "comment": "Great app!",
-      "page": "home",
-      "createdAt": "2026-04-09T14:41:08.395Z"
-    },
-    {
-      "_id": "1775746256809",
-      "rating": 5,
-      "comment": "That was cool",
-      "page": "home.html",
-      "createdAt": "2026-04-09T14:50:56.809Z"
-    }
-  ]
+  "favorites": []
 }

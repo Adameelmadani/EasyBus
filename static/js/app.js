@@ -1,4 +1,4 @@
-// app.js — Authentication, Toast Notifications, Dynamic Nav, Scroll Reveal, Feedback, Mobile Menu
+// app.js — Authentication, Toast Notifications, Dynamic Nav, Scroll Reveal, Mobile Menu
 
 // ── Toast System ──
 function showToast(message, type = 'info') {
@@ -120,69 +120,6 @@ function setupScrollReveal() {
   reveals.forEach(el => observer.observe(el));
 }
 
-// ── Feedback Widget ──
-function setupFeedback() {
-  const trigger = document.getElementById('feedback-trigger');
-  const panel = document.getElementById('feedback-panel');
-  const emojiRating = document.getElementById('emoji-rating');
-  const submitBtn = document.getElementById('feedback-submit');
-  
-  if (!trigger || !panel) return;
-
-  let selectedRating = 0;
-
-  trigger.addEventListener('click', () => {
-    panel.classList.toggle('open');
-  });
-
-  // Close when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.feedback-widget')) {
-      panel.classList.remove('open');
-    }
-  });
-
-  if (emojiRating) {
-    emojiRating.querySelectorAll('.emoji-btn').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        selectedRating = parseInt(btn.dataset.rating);
-        emojiRating.querySelectorAll('.emoji-btn').forEach(b => b.classList.remove('selected'));
-        btn.classList.add('selected');
-      });
-    });
-  }
-
-  if (submitBtn) {
-    submitBtn.addEventListener('click', async (e) => {
-      e.preventDefault();
-      if (selectedRating === 0) {
-        showToast("Please select a rating!", "error");
-        return;
-      }
-      const comment = document.getElementById('feedback-comment')?.value || '';
-      const page = getPageName();
-      
-      try {
-        const response = await fetch('/api/feedback', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ rating: selectedRating, comment, page })
-        });
-        if (response.ok) {
-          panel.innerHTML = '<div class="feedback-success">🎉 Thanks for your feedback!</div>';
-          setTimeout(() => panel.classList.remove('open'), 2000);
-          showToast("Feedback sent! Thank you!", "success");
-        } else {
-          showToast("Failed to send feedback.", "error");
-        }
-      } catch (err) {
-        showToast("Failed to send feedback.", "error");
-      }
-    });
-  }
-}
-
 // ── Init ──
 document.addEventListener("DOMContentLoaded", () => {
   // Protect dashboard FIRST
@@ -192,7 +129,6 @@ document.addEventListener("DOMContentLoaded", () => {
   updateNavbar();
   setupHamburger();
   setupScrollReveal();
-  setupFeedback();
 
   // ── Signup Handler ──
   const signupForm = document.getElementById("signup-form");

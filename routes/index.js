@@ -60,17 +60,4 @@ router.delete('/api/favorites', async (req, res) => {
   res.status(204).end();
 });
 
-// Feedback
-router.post('/api/feedback', async (req, res) => {
-  const { rating, comment, page } = req.body;
-  if (!rating) return res.status(400).send({ error: 'Missing rating' });
-  const entry = await dbClient.addFeedback({ rating, comment: comment || '', page: page || 'unknown' });
-  res.status(201).send(entry);
-});
-
-router.get('/api/feedback', async (req, res) => {
-  const feedback = await dbClient.getFeedback();
-  res.status(200).send(feedback);
-});
-
 module.exports = router;

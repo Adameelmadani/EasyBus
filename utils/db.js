@@ -8,8 +8,7 @@ class DBClient {
     this.data = {
       users: [],
       buses: [],
-      favorites: [],
-      feedback: []
+      favorites: []
     };
     this.load();
     this.seedBuses();
@@ -23,8 +22,7 @@ class DBClient {
         this.data = {
           users: parsed.users || [],
           buses: parsed.buses || [],
-          favorites: parsed.favorites || [],
-          feedback: parsed.feedback || []
+          favorites: parsed.favorites || []
         };
       } catch (e) {
         console.error('Error loading DB:', e);
@@ -121,22 +119,6 @@ class DBClient {
     this.data.favorites.splice(idx, 1);
     this.save();
     return true;
-  }
-
-  // ── Feedback ──
-  async addFeedback(feedbackData) {
-    const entry = {
-      _id: Date.now().toString(),
-      ...feedbackData,
-      createdAt: new Date().toISOString()
-    };
-    this.data.feedback.push(entry);
-    this.save();
-    return entry;
-  }
-
-  async getFeedback() {
-    return this.data.feedback.slice(-20).reverse();
   }
 
   // ── All Stations ──
