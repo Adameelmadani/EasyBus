@@ -9,10 +9,20 @@
 </head>
 <body>
 
+  <!-- Animated Background Orbs -->
+  <div class="animated-bg">
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
+  </div>
+
   <!-- Header -->
   <header class="header">
     <div class="eb"><a href="./home.html">EasyBus</a></div>
-    <nav class="navbar">
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="navbar" id="navbar">
       <ul>
         <li><a href="./home.html">Home</a></li>
         <li><a href="./about.html">About</a></li>
@@ -45,7 +55,7 @@
           <label for="confirm-password">Confirm Password</label>
           <input type="password" id="confirm-password" class="form-input" placeholder="Confirm your password" required>
         </div>
-        <button type="submit" class="btn-block" style="margin-top: .5rem;">Create Account</button>
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top: .5rem;">Create Account</button>
       </form>
 
       <p class="auth-footer">Already have an account? <a href="./login.html">Log in</a></p>
@@ -54,7 +64,7 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2024 EasyBus. All rights reserved.</p>
+    <p>&copy; 2025 EasyBus. All rights reserved.</p>
   </footer>
 
   <script src="./js/app.js"></script>

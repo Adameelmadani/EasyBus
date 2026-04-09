@@ -1,8 +1,14 @@
 {
   "users": [
     {
-      "_id": "1775173299564",
-      "username": "Adam El Madani",
+      "_id": "1775745472122",
+      "username": "testuser",
+      "email": "test@test.com",
+      "password": "7288edd0fc3ffcbe93a0cf06e3568e28521687bc"
+    },
+    {
+      "_id": "1775746122236",
+      "username": "AdamElMadani",
       "email": "adamelmadani0129@gmail.com",
       "password": "7ccbd66949e56a29bbe524a229563033cfb0060d"
     }
@@ -10,117 +16,336 @@
   "buses": [
     {
       "busId": "BUS001",
+      "name": "Green Line Express",
       "departureTimes": [
-        "08:00",
-        "08:10",
-        "08:15",
-        "08:20"
+        "06:00",
+        "07:30",
+        "09:00",
+        "10:30",
+        "12:00",
+        "14:00",
+        "16:00",
+        "18:00"
       ],
       "stations": [
         {
-          "name": "Station A",
+          "name": "Central Station",
           "timeRemaining": [
             "00:00:00",
+            "00:05:00",
             "00:10:00",
-            "00:15:00",
-            "00:20:00"
+            "00:15:00"
           ]
         },
         {
-          "name": "Station B",
+          "name": "Park Avenue",
           "timeRemaining": [
-            "00:10:00",
-            "00:20:00",
-            "00:25:00",
-            "00:30:00"
+            "00:08:00",
+            "00:13:00",
+            "00:18:00",
+            "00:23:00"
           ]
         },
         {
-          "name": "Station C",
+          "name": "University Campus",
           "timeRemaining": [
-            "00:20:00",
-            "00:30:00",
-            "00:35:00",
-            "00:40:00"
+            "00:18:00",
+            "00:23:00",
+            "00:28:00",
+            "00:33:00"
+          ]
+        },
+        {
+          "name": "City Mall",
+          "timeRemaining": [
+            "00:28:00",
+            "00:33:00",
+            "00:38:00",
+            "00:43:00"
           ]
         }
       ]
     },
     {
       "busId": "BUS002",
+      "name": "Downtown Shuttle",
       "departureTimes": [
+        "06:30",
         "08:00",
-        "08:10",
-        "08:15",
-        "08:20"
+        "09:30",
+        "11:00",
+        "13:00",
+        "15:00",
+        "17:00",
+        "19:00"
       ],
       "stations": [
         {
-          "name": "Station X",
+          "name": "Airport Terminal",
           "timeRemaining": [
             "00:00:00",
             "00:10:00",
-            "00:15:00",
-            "00:20:00"
-          ]
-        },
-        {
-          "name": "Station A",
-          "timeRemaining": [
-            "00:10:00",
             "00:20:00",
-            "00:25:00",
             "00:30:00"
           ]
         },
         {
-          "name": "Station Z",
+          "name": "Central Station",
           "timeRemaining": [
-            "00:20:00",
-            "00:30:00",
+            "00:15:00",
+            "00:25:00",
             "00:35:00",
-            "00:40:00"
+            "00:45:00"
+          ]
+        },
+        {
+          "name": "Business District",
+          "timeRemaining": [
+            "00:25:00",
+            "00:35:00",
+            "00:45:00",
+            "00:55:00"
+          ]
+        },
+        {
+          "name": "Riverside",
+          "timeRemaining": [
+            "00:35:00",
+            "00:45:00",
+            "00:55:00",
+            "01:05:00"
           ]
         }
       ]
     },
     {
       "busId": "BUS003",
+      "name": "Harbor Connect",
       "departureTimes": [
+        "07:00",
         "09:00",
-        "09:10",
-        "09:15",
-        "09:20"
+        "11:00",
+        "13:00",
+        "15:00",
+        "17:00"
       ],
       "stations": [
         {
-          "name": "Station X",
+          "name": "Harbor Station",
           "timeRemaining": [
             "00:00:00",
-            "00:10:00",
-            "00:15:00",
-            "00:20:00"
+            "00:08:00",
+            "00:16:00",
+            "00:24:00"
           ]
         },
         {
-          "name": "Station Q",
+          "name": "Old Town",
           "timeRemaining": [
-            "00:10:00",
+            "00:12:00",
             "00:20:00",
-            "00:25:00",
-            "00:30:00"
+            "00:28:00",
+            "00:36:00"
           ]
         },
         {
-          "name": "Station R",
+          "name": "Central Station",
           "timeRemaining": [
-            "00:20:00",
+            "00:22:00",
             "00:30:00",
-            "00:35:00",
-            "00:40:00"
+            "00:38:00",
+            "00:46:00"
+          ]
+        },
+        {
+          "name": "University Campus",
+          "timeRemaining": [
+            "00:32:00",
+            "00:40:00",
+            "00:48:00",
+            "00:56:00"
           ]
         }
       ]
+    },
+    {
+      "busId": "BUS004",
+      "name": "Suburban Ring",
+      "departureTimes": [
+        "06:15",
+        "08:15",
+        "10:15",
+        "12:15",
+        "14:15",
+        "16:15",
+        "18:15"
+      ],
+      "stations": [
+        {
+          "name": "Northgate",
+          "timeRemaining": [
+            "00:00:00",
+            "00:07:00",
+            "00:14:00",
+            "00:21:00"
+          ]
+        },
+        {
+          "name": "Park Avenue",
+          "timeRemaining": [
+            "00:10:00",
+            "00:17:00",
+            "00:24:00",
+            "00:31:00"
+          ]
+        },
+        {
+          "name": "City Mall",
+          "timeRemaining": [
+            "00:20:00",
+            "00:27:00",
+            "00:34:00",
+            "00:41:00"
+          ]
+        },
+        {
+          "name": "Southpark",
+          "timeRemaining": [
+            "00:30:00",
+            "00:37:00",
+            "00:44:00",
+            "00:51:00"
+          ]
+        },
+        {
+          "name": "Riverside",
+          "timeRemaining": [
+            "00:40:00",
+            "00:47:00",
+            "00:54:00",
+            "01:01:00"
+          ]
+        }
+      ]
+    },
+    {
+      "busId": "BUS005",
+      "name": "Night Owl",
+      "departureTimes": [
+        "20:00",
+        "21:30",
+        "23:00",
+        "00:30"
+      ],
+      "stations": [
+        {
+          "name": "Central Station",
+          "timeRemaining": [
+            "00:00:00",
+            "00:12:00",
+            "00:24:00",
+            "00:36:00"
+          ]
+        },
+        {
+          "name": "Business District",
+          "timeRemaining": [
+            "00:10:00",
+            "00:22:00",
+            "00:34:00",
+            "00:46:00"
+          ]
+        },
+        {
+          "name": "Old Town",
+          "timeRemaining": [
+            "00:20:00",
+            "00:32:00",
+            "00:44:00",
+            "00:56:00"
+          ]
+        },
+        {
+          "name": "Airport Terminal",
+          "timeRemaining": [
+            "00:35:00",
+            "00:47:00",
+            "00:59:00",
+            "01:11:00"
+          ]
+        }
+      ]
+    },
+    {
+      "busId": "BUS006",
+      "name": "Campus Circulator",
+      "departureTimes": [
+        "07:30",
+        "08:30",
+        "09:30",
+        "10:30",
+        "11:30",
+        "13:00",
+        "14:00",
+        "15:00",
+        "16:00",
+        "17:00"
+      ],
+      "stations": [
+        {
+          "name": "University Campus",
+          "timeRemaining": [
+            "00:00:00",
+            "00:05:00",
+            "00:10:00",
+            "00:15:00"
+          ]
+        },
+        {
+          "name": "Library Square",
+          "timeRemaining": [
+            "00:06:00",
+            "00:11:00",
+            "00:16:00",
+            "00:21:00"
+          ]
+        },
+        {
+          "name": "Park Avenue",
+          "timeRemaining": [
+            "00:14:00",
+            "00:19:00",
+            "00:24:00",
+            "00:29:00"
+          ]
+        },
+        {
+          "name": "Central Station",
+          "timeRemaining": [
+            "00:22:00",
+            "00:27:00",
+            "00:32:00",
+            "00:37:00"
+          ]
+        }
+      ]
+    }
+  ],
+  "favorites": [],
+  "feedback": [
+    {
+      "_id": "1775745668394",
+      "rating": 5,
+      "comment": "Great app!",
+      "page": "home",
+      "createdAt": "2026-04-09T14:41:08.395Z"
+    },
+    {
+      "_id": "1775746256809",
+      "rating": 5,
+      "comment": "That was cool",
+      "page": "home.html",
+      "createdAt": "2026-04-09T14:50:56.809Z"
     }
   ]
 }

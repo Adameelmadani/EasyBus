@@ -9,10 +9,21 @@
 </head>
 <body>
 
+  <!-- Animated Background Orbs -->
+  <div class="animated-bg">
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
+    <div class="orb orb--4"></div>
+  </div>
+
   <!-- Header -->
   <header class="header">
     <div class="eb"><a href="./home.html">EasyBus</a></div>
-    <nav class="navbar">
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="navbar" id="navbar">
       <ul>
         <li><a href="./home.html">Home</a></li>
         <li><a href="./about.html">About</a></li>
@@ -41,18 +52,29 @@
     <div class="about-card">
       <h3>Features</h3>
       <ul>
-        <li>Real-time bus tracking and arrival times</li>
-        <li>Comprehensive station information</li>
+        <li>Real-time bus tracking and live countdown timers</li>
+        <li>Comprehensive station information with autocomplete</li>
         <li>Smart route planning between stations</li>
-        <li>Mobile-friendly responsive interface</li>
+        <li>Favorite stations for quick daily access</li>
+        <li>Mobile-friendly responsive glassmorphism interface</li>
         <li>User accounts for personalized experience</li>
+        <li>Built-in feedback system for continuous improvement</li>
       </ul>
     </div>
   </div>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2024 EasyBus. All rights reserved.</p>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="./home.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./work_page.html">Dashboard</a>
+        <a href="./login.html">Log In</a>
+      </div>
+      <div class="footer-divider"></div>
+      <p>&copy; 2025 EasyBus. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="./js/app.js"></script>
