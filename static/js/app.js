@@ -48,6 +48,7 @@ function updateNavbar() {
       <li><a href="./home.html"${page === 'home.html' ? ' class="nav-active"' : ''}>Home</a></li>
       <li><a href="./about.html"${page === 'about.html' ? ' class="nav-active"' : ''}>About</a></li>
       <li><a href="./work_page.html"${page === 'work_page.html' ? ' class="nav-active"' : ''}>Dashboard</a></li>
+      <li><a href="./map.html"${page === 'map.html' ? ' class="nav-active"' : ''}>Map</a></li>
       <li><a href="#" id="logout-btn">Logout</a></li>
     `;
     const logoutBtn = document.getElementById('logout-btn');
@@ -76,7 +77,7 @@ function updateNavbar() {
 // ── Page Protection ──
 function protectDashboard() {
   const page = getPageName();
-  if (page === 'work_page.html' && !isLoggedIn()) {
+  if ((page === 'work_page.html' || page === 'map.html') && !isLoggedIn()) {
     window.location.href = './login.html';
     return true;
   }

@@ -1,13 +1,7 @@
 {
   "users": [
     {
-      "_id": "1775745472122",
-      "username": "testuser",
-      "email": "test@test.com",
-      "password": "7288edd0fc3ffcbe93a0cf06e3568e28521687bc"
-    },
-    {
-      "_id": "1775746122236",
+      "_id": "1775773210903",
       "username": "AdamElMadani",
       "email": "adamelmadani0129@gmail.com",
       "password": "7ccbd66949e56a29bbe524a229563033cfb0060d"
@@ -17,6 +11,7 @@
     {
       "busId": "BUS001",
       "name": "Green Line Express",
+      "color": "#10b981",
       "departureTimes": [
         "06:00",
         "07:30",
@@ -30,6 +25,8 @@
       "stations": [
         {
           "name": "Central Station",
+          "lat": 48.8566,
+          "lng": 2.3522,
           "timeRemaining": [
             "00:00:00",
             "00:05:00",
@@ -39,6 +36,8 @@
         },
         {
           "name": "Park Avenue",
+          "lat": 48.862,
+          "lng": 2.3387,
           "timeRemaining": [
             "00:08:00",
             "00:13:00",
@@ -48,6 +47,8 @@
         },
         {
           "name": "University Campus",
+          "lat": 48.8472,
+          "lng": 2.3563,
           "timeRemaining": [
             "00:18:00",
             "00:23:00",
@@ -57,6 +58,8 @@
         },
         {
           "name": "City Mall",
+          "lat": 48.853,
+          "lng": 2.369,
           "timeRemaining": [
             "00:28:00",
             "00:33:00",
@@ -69,6 +72,7 @@
     {
       "busId": "BUS002",
       "name": "Downtown Shuttle",
+      "color": "#3b82f6",
       "departureTimes": [
         "06:30",
         "08:00",
@@ -82,6 +86,8 @@
       "stations": [
         {
           "name": "Airport Terminal",
+          "lat": 48.87,
+          "lng": 2.3195,
           "timeRemaining": [
             "00:00:00",
             "00:10:00",
@@ -91,6 +97,8 @@
         },
         {
           "name": "Central Station",
+          "lat": 48.8566,
+          "lng": 2.3522,
           "timeRemaining": [
             "00:15:00",
             "00:25:00",
@@ -100,6 +108,8 @@
         },
         {
           "name": "Business District",
+          "lat": 48.8686,
+          "lng": 2.3352,
           "timeRemaining": [
             "00:25:00",
             "00:35:00",
@@ -109,6 +119,8 @@
         },
         {
           "name": "Riverside",
+          "lat": 48.86,
+          "lng": 2.378,
           "timeRemaining": [
             "00:35:00",
             "00:45:00",
@@ -121,6 +133,7 @@
     {
       "busId": "BUS003",
       "name": "Harbor Connect",
+      "color": "#f59e0b",
       "departureTimes": [
         "07:00",
         "09:00",
@@ -132,6 +145,8 @@
       "stations": [
         {
           "name": "Harbor Station",
+          "lat": 48.8416,
+          "lng": 2.375,
           "timeRemaining": [
             "00:00:00",
             "00:08:00",
@@ -141,6 +156,8 @@
         },
         {
           "name": "Old Town",
+          "lat": 48.8505,
+          "lng": 2.3475,
           "timeRemaining": [
             "00:12:00",
             "00:20:00",
@@ -150,6 +167,8 @@
         },
         {
           "name": "Central Station",
+          "lat": 48.8566,
+          "lng": 2.3522,
           "timeRemaining": [
             "00:22:00",
             "00:30:00",
@@ -159,6 +178,8 @@
         },
         {
           "name": "University Campus",
+          "lat": 48.8472,
+          "lng": 2.3563,
           "timeRemaining": [
             "00:32:00",
             "00:40:00",
@@ -171,6 +192,7 @@
     {
       "busId": "BUS004",
       "name": "Suburban Ring",
+      "color": "#8b5cf6",
       "departureTimes": [
         "06:15",
         "08:15",
@@ -183,6 +205,8 @@
       "stations": [
         {
           "name": "Northgate",
+          "lat": 48.875,
+          "lng": 2.35,
           "timeRemaining": [
             "00:00:00",
             "00:07:00",
@@ -192,6 +216,8 @@
         },
         {
           "name": "Park Avenue",
+          "lat": 48.862,
+          "lng": 2.3387,
           "timeRemaining": [
             "00:10:00",
             "00:17:00",
@@ -201,6 +227,8 @@
         },
         {
           "name": "City Mall",
+          "lat": 48.853,
+          "lng": 2.369,
           "timeRemaining": [
             "00:20:00",
             "00:27:00",
@@ -210,6 +238,8 @@
         },
         {
           "name": "Southpark",
+          "lat": 48.839,
+          "lng": 2.358,
           "timeRemaining": [
             "00:30:00",
             "00:37:00",
@@ -219,6 +249,8 @@
         },
         {
           "name": "Riverside",
+          "lat": 48.86,
+          "lng": 2.378,
           "timeRemaining": [
             "00:40:00",
             "00:47:00",
@@ -231,6 +263,7 @@
     {
       "busId": "BUS005",
       "name": "Night Owl",
+      "color": "#ec4899",
       "departureTimes": [
         "20:00",
         "21:30",
@@ -240,6 +273,8 @@
       "stations": [
         {
           "name": "Central Station",
+          "lat": 48.8566,
+          "lng": 2.3522,
           "timeRemaining": [
             "00:00:00",
             "00:12:00",
@@ -249,6 +284,8 @@
         },
         {
           "name": "Business District",
+          "lat": 48.8686,
+          "lng": 2.3352,
           "timeRemaining": [
             "00:10:00",
             "00:22:00",
@@ -258,6 +295,8 @@
         },
         {
           "name": "Old Town",
+          "lat": 48.8505,
+          "lng": 2.3475,
           "timeRemaining": [
             "00:20:00",
             "00:32:00",
@@ -267,6 +306,8 @@
         },
         {
           "name": "Airport Terminal",
+          "lat": 48.87,
+          "lng": 2.3195,
           "timeRemaining": [
             "00:35:00",
             "00:47:00",
@@ -279,6 +320,7 @@
     {
       "busId": "BUS006",
       "name": "Campus Circulator",
+      "color": "#06b6d4",
       "departureTimes": [
         "07:30",
         "08:30",
@@ -294,6 +336,8 @@
       "stations": [
         {
           "name": "University Campus",
+          "lat": 48.8472,
+          "lng": 2.3563,
           "timeRemaining": [
             "00:00:00",
             "00:05:00",
@@ -303,6 +347,8 @@
         },
         {
           "name": "Library Square",
+          "lat": 48.845,
+          "lng": 2.343,
           "timeRemaining": [
             "00:06:00",
             "00:11:00",
@@ -312,6 +358,8 @@
         },
         {
           "name": "Park Avenue",
+          "lat": 48.862,
+          "lng": 2.3387,
           "timeRemaining": [
             "00:14:00",
             "00:19:00",
@@ -321,6 +369,8 @@
         },
         {
           "name": "Central Station",
+          "lat": 48.8566,
+          "lng": 2.3522,
           "timeRemaining": [
             "00:22:00",
             "00:27:00",

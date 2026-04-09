@@ -59,5 +59,14 @@ router.delete('/api/favorites', async (req, res) => {
   if (!removed) return res.status(404).send({ error: 'Favorite not found' });
   res.status(204).end();
 });
+// Map data
+router.get('/api/map', async (req, res) => {
+  try {
+    const mapData = await dbClient.getMapData();
+    res.status(200).send(mapData);
+  } catch (error) {
+    res.status(500).send({ error: 'Failed to fetch map data' });
+  }
+});
 
 module.exports = router;
