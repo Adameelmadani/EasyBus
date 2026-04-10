@@ -1,38 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EasyBus</title>
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create your EasyBus account to start tracking buses and planning routes.">
+  <title>EasyBus - Sign Up</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" type="image/png" href="./assets/logo.png">
 </head>
 <body>
-    <header class="header">
-            <div class="eb">
-                <a href="./home.html">
-                    <h1>ƎB</h1>
-                </a>
-            </div>
-            <div class="encadr">
-                <h2>EasyBus</h2>
-            </div>
-    </header>
 
-        <div class="container">
-            <form id="signup-form">
-                <input type="text" id="username" placeholder="Username" required>
-                <input type="email" id="email" placeholder="Email" required>
-                <input type="password" id="password" placeholder="Password" required>
-                <input type="password" id="confirm-password" placeholder="Confirm Password" required>
-                <button class="button">Send</button>
-            </form>
-            <p>Already have an account? <a href="./login.html">Login</a></p>
-        </div> 
-         
-    <script src="../src/pages/Signup.js"></script>
-    
-    <footer class="footer">
-        <p>&copy; 2024 webApp</p>
-    </footer>
+  <!-- Animated Background Orbs -->
+  <div class="animated-bg">
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="eb"><a href="./home.html">EasyBus</a></div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="navbar" id="navbar">
+      <ul>
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./login.html">Log In</a></li>
+        <li><a href="./index.html" class="nav-cta">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Signup Form -->
+  <div class="auth-wrapper">
+    <div class="auth-card">
+      <h1>Create Account</h1>
+      <p class="subtitle">Start tracking buses in seconds</p>
+
+      <form id="signup-form">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" class="form-input" placeholder="Choose a username" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" class="form-input" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" class="form-input" placeholder="Create a password" required minlength="6">
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" class="form-input" placeholder="Confirm your password" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top: .5rem;">Create Account</button>
+      </form>
+
+      <p class="auth-footer">Already have an account? <a href="./login.html">Log in</a></p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 EasyBus. All rights reserved.</p>
+  </footer>
+
+  <script src="./js/app.js"></script>
 </body>
 </html>

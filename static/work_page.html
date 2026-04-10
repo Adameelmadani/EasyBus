@@ -1,45 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>EasyBus.ma</title>
-	<link rel="stylesheet" href="./css/work_style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Search bus stations and plan routes with EasyBus dashboard.">
+  <title>EasyBus - Dashboard</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" type="image/png" href="./assets/logo.png">
 </head>
 <body>
 
-    <div class="navbar">
-            <img src="./pic/Capture d’écran 2024-03-30 164118.png">
-            <ul>
-                <li> <a href="./connexion.html">About</a></li>
-                <li> <a href="./profile.html">Profile</a></li>
-                <li> <a href="./home.html">Disconnect</a></li>
-            </ul>
+  <!-- Animated Background Orbs -->
+  <div class="animated-bg">
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="eb"><a href="./home.html">EasyBus</a></div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="navbar" id="navbar">
+      <ul>
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="#" id="logout-btn">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Dashboard -->
+  <main class="dashboard">
+    <div class="dashboard-header">
+      <h1>Bus Information & Routes</h1>
+      <p>Search stations or plan your route between stops</p>
     </div>
-    <div class=".degrade-horizontal">
-        <div class="container2">
-            <h1>Search for Stations or Route</h1>
-            <div class="tabs">
-                <button class="tab-btn active" id="stationsTab">Stations</button>
-                <button class="tab-btn" id="targetTab">Route</button>
-            </div>
 
-            <div id="stationsForm" class="search-form">
-                <input type="text" id="stationSearch" placeholder="Enter station name...">
-                <button class="btn" onclick="searchStations()">Search</button>
-            </div>
+    <!-- Favorites Panel -->
+    <div class="favorites-panel" id="favorites-panel">
+      <h3>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Favorite Stations
+      </h3>
+      <div class="favorites-list" id="favorites-list">
+        <span class="fav-empty">No favorites yet. Search a station and click ★ to save!</span>
+      </div>
+    </div>
 
-            <div id="targetForm" class="search-form hidden">
-                <input type="text" id="departure" placeholder="From...">
-                <input type="text" id="destination" placeholder="To...">
-                <button class="btn" onclick="searchRoute()">Search</button>
-            </div>
+    <!-- Tabs -->
+    <div class="tabs">
+      <div class="tab active" id="stationsTab" onclick="switchTab('stations')">Stations</div>
+      <div class="tab" id="targetTab" onclick="switchTab('target')">Routes</div>
+    </div>
 
-            <div id="results">
-                <!-- Results will be displayed here -->
-            </div>
+    <!-- Station Search -->
+    <div id="stationsForm">
+      <div class="search-box" style="position:relative;">
+        <input type="text" id="stationSearch" placeholder="Enter station name (e.g. Central Station)..." autocomplete="off">
+        <div class="suggestions-dropdown hidden" id="station-suggestions"></div>
+        <button onclick="searchStation()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          Search
+        </button>
+      </div>
+    </div>
+
+    <!-- Route Search -->
+    <div id="targetForm" class="hidden">
+      <div class="search-box-col">
+        <div style="position:relative;">
+          <input type="text" id="departure" placeholder="From (e.g. Central Station)" autocomplete="off">
+          <div class="suggestions-dropdown hidden" id="departure-suggestions"></div>
         </div>
-
-        <script src="./js/script.js"></script>
+        <div style="position:relative;">
+          <input type="text" id="destination" placeholder="To (e.g. University Campus)" autocomplete="off">
+          <div class="suggestions-dropdown hidden" id="destination-suggestions"></div>
+        </div>
+        <button onclick="searchRoute()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Find Route
+        </button>
+      </div>
     </div>
+
+    <!-- Results -->
+    <div id="results">
+      <div class="result-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <p>Enter a station name or plan a route to see live results.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 EasyBus. All rights reserved.</p>
+  </footer>
+
+  <script src="./js/script.js"></script>
+  <script src="./js/app.js"></script>
 </body>
 </html>

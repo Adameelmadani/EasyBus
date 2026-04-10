@@ -1,8 +1,7 @@
-import dbClient from '../utils/db';
-import redisClient from '../utils/redis';
-
+const dbClient = require('../utils/db');
+const redisClient = require('../utils/redis');
 const crypto = require('crypto');
-const { ObjectId } = require('mongodb');
+
 
 class UsersController {
   static async postNew(request, response) {
@@ -37,8 +36,7 @@ class UsersController {
     if (!userid) {
       return response.status(401).send({ error: 'Unauthorized' });
     }
-    const useridobj = new ObjectId(userid);
-    const user = await dbClient.getUser({ _id: useridobj });
+    const user = await dbClient.getUser({ _id: userid });
     return response.send({ username: user.username, email: user.email, id: userid });
   }
 }
