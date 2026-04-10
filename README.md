@@ -1,12 +1,16 @@
 # EasyBus
 
-<img src="https://img.shields.io/badge/Language-JavaScript-yellow">
-<img src="https://img.shields.io/badge/Runtime-Node.js-green">
-<img src="https://img.shields.io/badge/License-ISC-blue">
+![JavaScript](https://img.shields.io/badge/JavaScript-yellow)
+![NodeJS](https://img.shields.io/badge/NodeJS-yellow)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 **EasyBus** is a modern, responsive web application designed to provide users with real-time information about nearby bus routes, timings, and stops. With a user-friendly interface powered by clean glassmorphism design, users can easily plan their trips, find the closest bus stops with an interactive map, and track the arrival times of buses seamlessly.
 
 > Built by **Adam El Madani** &amp; **Ghita Bouzrbay**
+
+<div align="center">
+  <img src="static/assets/vid.gif" alt="EasyBus Demo" />
+</div>
 
 ---
 
@@ -132,4 +136,4 @@ All protected routes require an `x-token` header obtained from `/api/connect`.
 
 ## License
 
-This project is licensed under the ISC License.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
